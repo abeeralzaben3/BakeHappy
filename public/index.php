@@ -1,7 +1,4 @@
 <?php
-require_once __DIR__ . '/../app/core/Database.php';
+require_once __DIR__ . '/../app/core/App.php';
 
-$pdo = Database::getInstance()->getConnection();
-$count = $pdo->query('SELECT COUNT(*) FROM categories')->fetchColumn();
-
-echo "Connected. Categories: $count";
+new App();
