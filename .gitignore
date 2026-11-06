@@ -1,0 +1,8 @@
+app/config/config.php
+public/uploads/products/*
+public/uploads/categories/*
+!public/uploads/products/.gitkeep
+!public/uploads/categories/.gitkeep
+.vscode/
+.DS_Store
+Thumbs.db
