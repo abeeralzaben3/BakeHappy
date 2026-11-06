@@ -50,4 +50,15 @@ class ImageUploader
             }
         }
     }
+    // Returns a usable image URL for a path, a full URL, or nothing
+public static function url(?string $path): string
+{
+    if (!$path) {
+        return BASE_URL . '/assets/img/placeholder.png';
+    }
+    if (preg_match('#^https?://#', $path)) {
+        return $path;
+    }
+    return BASE_URL . '/' . $path;
+}
 }
